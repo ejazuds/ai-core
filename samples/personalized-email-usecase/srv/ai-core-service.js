@@ -1,7 +1,7 @@
-const resourceGroupId = `<resourceGroupId>`;
-const deploymentId = "<deploymentId>";
-const AI_CORE_DESTINATION = "<AI_CORE_DESTINATION_NAME>";
-const API_VERSION = "<API_VERSION>";
+const resourceGroupId = `genai-mail-insights-dcbuild-sa0176014160h9hk2lcrpj-3s4zd`;
+const deploymentId = "d4c5158a23c8eaa6"; //https://api.ai.prod.ap-southeast-2.aws.ml.hana.ondemand.com/v2/inference/deployments/d4c5158a23c8eaa6
+const AI_CORE_DESTINATION = "AI_CORE_DESTINATION_NAME";
+const API_VERSION = "2023-05-15";
 
 async function getPersonalizedEmail(data)
 {
@@ -15,8 +15,6 @@ async function getPersonalizedEmail(data)
                     Here is the employee information is formatted  as a dictionary
                     ${data}
 
-                    Include atleast two paragraphs. The email should be written with these values in mind. 
-
                     Important: Instead of using employee value in the email use the corresponding employee attribute with double quotes. This is very important as the next steps depend on it.
 
                     Do not include any additional information apart from the email body. Address the employee using "NAME" enclosed in double quotes.
@@ -27,7 +25,7 @@ async function getPersonalizedEmail(data)
     const aiCoreService = await cds.connect.to(AI_CORE_DESTINATION);
     const payload = {
         messages: [{ role: "user", content: template }],
-        max_tokens: 16000,
+        max_tokens: 4000,
         temperature: 0.0,
     };
     const headers = {
@@ -36,7 +34,8 @@ async function getPersonalizedEmail(data)
     };
     const response = await aiCoreService.send({
         // @ts-ignore
-        query: `POST /inference/deployments/${deploymentId}/chat/completions?api-version=${API_VERSION}`,
+        ////https://api.ai.prod.ap-southeast-2.aws.ml.hana.ondemand.com/v2/inference/deployments/d4c5158a23c8eaa6
+        query: `POST v2/inference/deployments/${deploymentId}/chat/completions?api-version=${API_VERSION}`,
         data: payload,
         headers: headers,
     });

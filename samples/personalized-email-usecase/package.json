@@ -12,7 +12,7 @@
         "@sap/cds-hana": "^2",
         "@sap/hana-client": "^2.18.27",
         "@sap/xssec": "^3",
-        "cap-llm-plugin" : "*",
+        "cap-llm-plugin": "^1.4.4",
         "express": "^4",
         "passport": "^0"
     },
@@ -36,10 +36,10 @@
             "db": "hana",
             "destinations": true,
             "cap-llm-plugin": true,
-            "<AI_CORE_DESTINATION_NAME>": {
+            "AI_CORE_DESTINATION_NAME": {
                 "kind": "rest",
                 "credentials": {
-                    "destination": "<AI_CORE_DESTINATION_NAME>",
+                    "destination": "AI_CORE_DESTINATION_NAME",
                     "requestTimeout": "300000"
                 }
             }
