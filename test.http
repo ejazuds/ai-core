@@ -1,0 +1,6 @@
+GET http://localhost:4004/odata/v4/chat/askLLM
+Content-Type: application/json
+
+{
+  "query": "ChatGPT, please answer the following question in JSON format. Question: What is the capital of France? Please provide your answer with the keys 'country' and 'capital'."
+}
