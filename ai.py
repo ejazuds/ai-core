@@ -9,11 +9,11 @@ import pandas as pd
 
 # please enter the Credentials from your AI core landscape.
 env_vars = {
-        "AICORE_AUTH_URL": "https://h9hk2lcrpj-3s4zd.authentication.ap10.hana.ondemand.com",
-        "AICORE_CLIENT_ID": "sb-786f7a53-2c4d-4899-babb-f1f3d727d640!b7743|aicore!b1456",
-        "AICORE_CLIENT_SECRET": "3c4c6b73-b162-4c6c-b475-9b38b4ae144c$KvpnBm4BcSNgFHNA00utoeZhUH1V5HPuFG4sT_9jpsA=",
-        "AICORE_RESOURCE_GROUP": "bob-group",
-        "AICORE_BASE_URL": "https://api.ai.prod.ap-southeast-2.aws.ml.hana.ondemand.com/v2"
+        "AICORE_AUTH_URL": "",
+        "AICORE_CLIENT_ID": "",
+        "AICORE_CLIENT_SECRET": "",
+        "AICORE_RESOURCE_GROUP": "",
+        "AICORE_BASE_URL": ""
 }
 
 # Set the environment variables using `os.environ`.
@@ -36,10 +36,10 @@ import hdbcli
 from hdbcli import dbapi
 
 cc = dbapi.connect(
-    address='7e02cac5-aa53-4ea5-bee3-a4679f3e904f.hana.prod-ap10.hanacloud.ondemand.com',
-    port='443',  # 443 is usual
-    user='9058B00172DB4B21986A6E58710D21F3_3E6CIMCDRNNFDBURI41V2EGJN_RT',
-    password='Fl49q86kHiw_1YISKlOCI6_PO_1845zY9RQ9Mxk0C2_8oCP8TG47GlGtito9tmdskR9k9QwlVyKDRKgc8eRIBpP-CSmnOhiosDEcplxD0cewzyp2e2zLrAzdyVgyNygs',
+    address='',
+    port='',  # 443 is usual
+    user='',
+    password='',
     encrypt=True
     )
 
