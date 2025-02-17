@@ -1,13 +1,1 @@
-{
-    "database_id": "779f3e904f",
-    "host": "7e02c4f.hana.prod-ap10.hanacloud.ondemand.com",
-    "port": "443",
-    "driver": "com.sap.db.jdbc.Driver",
-    "url": "jdbc:sap://7tificate=true&currentschema=9058B00172DB4B21986A6E58710D21F3",
-    "schema": "9058B00172DB4B21986A6E58710D21F3",
-    "certificate": "-----BEGIN CERTIFICATE-----\\n-----END CERTIFICATE-----",
-    "hdi_user": "_DT",
-    "hdi_password": "",
-    "user": "_RT",
-    "password": ""
-  }
+{ }
